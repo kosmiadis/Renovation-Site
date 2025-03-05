@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+:root {
+  --mobile-menu-bg-color: #feeedd;
+  --accent-color: rgb(24, 155, 255);
+  --display-font: "Lexend", sans-serif;
+}
+
+@theme {
+  --display-font: var(--display-font),
+  --accent-color: var(--accent-color),
+  --mobile-menu-bg-color: var(--mobile-menu-bg-color)
+}
