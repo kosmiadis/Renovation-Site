@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 
 export function useMobileMenu () {
     
@@ -6,6 +6,5 @@ export function useMobileMenu () {
     function toggle () {
         setIsMobileMenuOpen(prevVal => !prevVal);
     }
-    useEffect(() => {}, [isMobileMenuOpen]);
     return { isMobileMenuOpen, toggle }
 }

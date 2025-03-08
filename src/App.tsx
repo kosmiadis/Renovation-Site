@@ -1,11 +1,17 @@
-import { BrowserRouter as Router } from 'react-router-dom'
-import Header from './components/Header'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Header from './components/Header/Header.tsx'
+import HomePage from './pages/HomePage.tsx'
 
 function App() {
 
   return (
   <Router>
     <Header />
+    <div className='max-w-[1350px] mx-auto'>
+      <Routes>
+          <Route path='/' element={<HomePage />}/>
+      </Routes>
+    </div>
   </Router>
   )
 }

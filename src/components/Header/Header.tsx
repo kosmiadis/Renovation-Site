@@ -1,9 +1,8 @@
-import { Cross, CrossIcon, DoorClosed, Menu, X } from 'lucide-react';
-import logo from '../assets/logo.svg';
+import { Menu, X } from 'lucide-react';
+import logo from '../../assets/logo.svg';
 import { Link, NavLink } from "react-router-dom"
-import { useResize } from '../hooks/useResize';
-import { useState } from 'react';
-import { useMobileMenu } from '../hooks/useMobileMenu';
+import { useResize } from '../../hooks/useResize';
+import { useMobileMenu } from '../../hooks/useMobileMenu';
 
 function Brand () {
     const {screenWidth} = useResize();
@@ -66,17 +65,19 @@ function MobileNavigation ({ toggleMenu }: {toggleMenu: () => void}) {
 
 export default function Header () {
     const { screenWidth } = useResize();
-    const {isMobileMenuOpen, toggle} = useMobileMenu();
+    const { isMobileMenuOpen, toggle } = useMobileMenu();
     
-    return <header className="w-full max-w-[1200px] mx-auto py-[2rem] px-4 flex justify-between font-display bg-white sticky top-0">
-        <Brand />
-        {/* Mobile & Tablet Navigation */}
-        { screenWidth <= 769 && (<>
-            <button className='hover:cursor-pointer' onClick={toggle}><Menu size={32} /></button>
-            {isMobileMenuOpen && <MobileNavigation toggleMenu={toggle} />}
-        </>)}    
+    return <header className="w-full py-[1.4rem] px-4 bg-white sticky top-0">
+        <div className='mx-auto max-w-[1200px] flex justify-between font-display'>
+            <Brand />
+            {/* Mobile & Tablet Navigation */}
+            { screenWidth <= 769 && (<>
+                <button className='hover:cursor-pointer' onClick={toggle}><Menu size={32} /></button>
+                {isMobileMenuOpen && <MobileNavigation toggleMenu={toggle} />}
+            </>)}    
 
-        {/* Desktop & Laptop Navigation */}
-        { screenWidth > 769 && <Navigation /> }
+            {/* Desktop & Laptop Navigation */}
+            { screenWidth > 769 && <Navigation /> }
+        </div>
     </header>
 }
