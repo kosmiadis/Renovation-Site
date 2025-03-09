@@ -2,6 +2,7 @@
 
 :root {
   --mobile-menu-bg-color: #feeedd;
+  --font-color: #1e262e;
   --accent-color: #2bb6ed;
   --display-font: "Lexend", sans-serif;
 }
@@ -9,5 +10,6 @@
 @theme {
   --display-font: var(--display-font),
   --accent-color: var(--accent-color),
+  --font-color: var(--font-color),
   --mobile-menu-bg-color: var(--mobile-menu-bg-color)
 }

@@ -7,7 +7,7 @@ function App() {
   return (
   <Router>
     <Header />
-    <div className='max-w-[1350px] mx-auto'>
+    <div className=' mx-auto'>
       <Routes>
           <Route path='/' element={<HomePage />}/>
       </Routes>

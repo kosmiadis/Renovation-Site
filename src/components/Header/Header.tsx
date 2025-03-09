@@ -15,11 +15,11 @@ type NavigationLink = { label: string, to: string }
 
 function Navigation () {
     const Links: NavigationLink[] = [
-        { label: 'Αρχική', to: '/'},
-        {label: 'Υπηρεσίες', to:'/services'},
-        {label: 'Σχετικά', to:'/about'},
+        { label: 'Home', to: '/'},
+        {label: 'Services', to:'/services'},
+        {label: 'About', to:'/about'},
         {label: 'Blog', to:'/blog'},
-        {label: 'Επικοινωνία', to:'/contact'},
+        {label: 'Contact', to:'/contact'},
     ]
 
     const { screenWidth } = useResize();
@@ -67,7 +67,7 @@ export default function Header () {
     const { screenWidth } = useResize();
     const { isMobileMenuOpen, toggle } = useMobileMenu();
     
-    return <header className="w-full py-[1.4rem] px-4 bg-white sticky top-0">
+    return <header className="z-10 w-full py-[1.4rem] px-4 bg-white sticky top-0">
         <div className='mx-auto max-w-[1200px] flex justify-between font-display'>
             <Brand />
             {/* Mobile & Tablet Navigation */}
