@@ -1,4 +1,4 @@
-import { useResize } from "../../hooks/useResize"
+import { useResize } from "../../../hooks/useResize"
 import ServicesPreview from "./ServicesPreview";
 
 function CTA () {

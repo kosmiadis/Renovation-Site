@@ -1,14 +1,14 @@
 import { useEffect } from 'react';
-import sliderImg1 from '../../assets/slider_image_1.webp';
-import sliderImg2 from '../../assets/slider_image_2.webp';
-import sliderImg3 from '../../assets/slider_image_3.webp';
-import sliderImg4 from '../../assets/slider_image_4.webp';
-import sliderImg5 from '../../assets/slider_image_5.webp';
-import sliderImg6 from '../../assets/slider_image_6.webp';
-import { useCarousel } from '../../store/carousel.store';
+import sliderImg1 from '../../../assets/slider_image_1.webp';
+import sliderImg2 from '../../../assets/slider_image_2.webp';
+import sliderImg3 from '../../../assets/slider_image_3.webp';
+import sliderImg4 from '../../../assets/slider_image_4.webp';
+import sliderImg5 from '../../../assets/slider_image_5.webp';
+import sliderImg6 from '../../../assets/slider_image_6.webp';
+import { useCarousel } from '../../../store/carousel.store';
 import Carousel, { Image } from '../Carousel/Carousel';
 import CarouselControllers from '../Carousel/CarouselControllers';
-import { useResize } from '../../hooks/useResize';
+import { useResize } from '../../../hooks/useResize';
 
 export default function OurWorks () {
     
@@ -36,10 +36,10 @@ export default function OurWorks () {
     }, [])
     
 
-    return <div className='max-w-[1400px] py-10 mt-[80px] w-[90%] mx-auto flex flex-col justify-center'>
+    return <section className='max-w-[1400px] py-10 mt-[80px] w-[90%] mx-auto flex flex-col justify-center'>
         <span className='text-center text-md text-(--accent-color) font-semibold'>Mauris Augue</span>
         <h2 className='mt-[15px] text-center font-bold text-(--font-color) text-4xl'>Our Works</h2>
         <Carousel images={images}/>
         <CarouselControllers />
-    </div>
+    </section>
 }

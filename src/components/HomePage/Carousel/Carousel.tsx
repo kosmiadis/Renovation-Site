@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import { useResize } from "../../hooks/useResize";
-import { useCarousel } from "../../store/carousel.store"
+import { useResize } from "../../../hooks/useResize";
+import { useCarousel } from "../../../store/carousel.store"
 
 export type Image = { src: string, alt: string }
 

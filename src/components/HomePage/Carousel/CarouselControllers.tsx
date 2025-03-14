@@ -1,5 +1,5 @@
-import { useResize } from "../../hooks/useResize";
-import { useCarousel } from "../../store/carousel.store";
+import { useResize } from "../../../hooks/useResize";
+import { useCarousel } from "../../../store/carousel.store";
 
 function CarouselController ({ slideIndex }: {slideIndex: number}) {
     const { currentSlide, goToSlide } = useCarousel();
