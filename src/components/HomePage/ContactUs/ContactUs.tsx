@@ -27,7 +27,7 @@ export default function ContactUs () {
             <p className="mt-[20px] mb-[30px] text-xl">We are ready to help you with your home renovation project.</p>
             <form onSubmit={handleSubmit} className="w-full flex flex-col gap-[25px]">
                 {inputs.map(input => (
-                    <Input {...input}/>
+                    <Input key={input.label} {...input}/>
                 ))}
                 <button className="mt-[12px] w-full bg-(--accent-color) text-white py-[12px] font-semibold text-lg hover:cursor-pointer hover:bg-blue-400 duration-300">Book Appointment</button>
             </form>

@@ -39,7 +39,7 @@ function NavigationLink ({ label, to } : { label: string, to: string}) {
     </NavLink>
 }
 
-function ContactDetail ({ label, content}: {label: string, content: string}) {
+export function ContactDetail ({ label, content}: {label: string, content: string}) {
     return <span className='min-w-[100px] my-2 text-stone-700'>
         {label}:<br />
         <b>{content}</b>

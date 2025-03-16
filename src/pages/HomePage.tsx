@@ -1,3 +1,6 @@
+import { Copyright } from "lucide-react";
+import Footer from "../components/Footer/Footer";
+import BottomCta from "../components/HomePage/BottomCTA/BottomCTA";
 import ContactUs from "../components/HomePage/ContactUs/ContactUs";
 import Experience from "../components/HomePage/Experience/Experience";
 import Hero from "../components/HomePage/Hero/Hero";
@@ -15,5 +18,6 @@ export default function HomePage () {
         <Experience />
         <ServicesLogosBar />
         <ContactUs />
+        <BottomCta />
     </main>
 }
